@@ -1,4 +1,26 @@
-# devops-project-3-kubernetes
-devops-project-3-kubernetes
+# devops-kubernetes-deployment
+devops-kubernetes-deployment
 
-Kubernetes
+Kubernetes Deployment
+
+
+
+Architecture diagram
+
+
+Setup instructions
+
+
+
+Screenshots
+
+
+
+Tools used
+
+
+
+Explanation of workflow
+
+
+
