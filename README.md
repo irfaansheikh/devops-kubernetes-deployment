@@ -1,31 +1,29 @@
-# devops-kubernetes-deployment
-
 # DevOps Kubernetes Deployment
 A hands-on DevOps project demonstrating how to containerize a Node.js application and deploy it to a Kubernetes cluster using Minikube. The project showcases container orchestration, service exposure, and horizontal scaling.
 
-*Project Overview*
+# Project Overview
 
 This project simulates a simple production-style Kubernetes deployment. A Node.js application is containerized using Docker and deployed into a Kubernetes cluster. The application is exposed through a Kubernetes Service, allowing external access via Minikube.
 
 The project also demonstrates how Kubernetes manages multiple pods and how deployments can be scaled dynamically.
  
-*Architecture*
+# Architecture
     User (Browser)
             ↓
     Kubernetes Service (NodePort)
             ↓
     Pods running Node.js Application
 
-*Workflow:*
+# Workflow:
     1. Application is containerized using Docker
     2. Image is loaded into the local Kubernetes cluster
     3. Deployment creates multiple pods
     4. Service exposes the application
     5. Kubernetes distributes traffic across pods
 
-*Project Structure*
+# Project Structure
 
-devops-kubernetes-deployment/
+devops-kubernetes-deployment/ <br>
 app/
  ├── app.js
  ├── package.json
