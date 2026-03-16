@@ -56,34 +56,34 @@ The application is a simple Node.js HTTP server.
 The container exposes port 3000, which Kubernetes routes through the service.
 
 # Deployment Workflow
-<h3> Start Kubernetes Cluster: </h3><br>
+<h3> Start Kubernetes Cluster: </h3>
     minikube start
 
-<h3> Verify cluster status: </h3><br>
-    kubectl get nodes
-    Build Docker Image
+<h3> Verify cluster status: </h3>
+    kubectl get nodes<br>
+    Build Docker Image<br>
     docker build -t devops-k8s-app:v1 .
 
-Verify image:
-    docker images
-    Load Image into Minikube
+<h3> Verify image:
+    docker images<br>
+    Load Image into Minikube<br>
     minikube image load devops-k8s-app:v1
 
 Verify image inside cluster:
-    minikube image ls
-    Deploy Application
+    minikube image ls<br>
+    Deploy Application<br>
     kubectl apply -f deployment.yaml
 
 Check pods:
-    kubectl get pods
-    Expose Application
+    kubectl get pods<br>
+    Expose Application<br>
     kubectl apply -f service.yaml
 
 Verify service:
     kubectl get services
 
 Access application:
-    minikube service devops-service
+    minikube service devops-service<br>
     Scaling the Application
 
 Kubernetes allows horizontal scaling by increasing the number of running pods.
@@ -97,7 +97,7 @@ Verify scaling:
 Kubernetes automatically distributes traffic between running pods.
 
 
-*Screenshots*
+# Screenshots
 Minikube Cluster Start
 ![minikube start](<Screenshot 2026-03-16 225849.png>)
 
@@ -130,25 +130,25 @@ Service Verification
 Application Access
 ![minikube service](<Screenshot 2026-03-17 000559.png>)
 
-Browser Output
+Browser Output<br>
 ![Browser output](<Screenshot 2026-03-17 000651.png>)
 
 
 Cleanup
-Destroy the Kubernetes cluster:
-minikube delete
+Destroy the Kubernetes cluster:<br>
+minikube delete<br>
 ![Destroy the clusters](<Screenshot 2026-03-17 001921.png>)
 
 Remove unused Docker resources:
-    docker system prune -a
-    docker volume prune
-    docker builder prune
-    docker system prune -a
+    docker system prune -a<br>
+    docker volume prune<br>
+    docker builder prune<br>
+    docker system prune -a<br>
 ![Clean Docker images](<Screenshot 2026-03-17 002322.png>)
 ![Optional deep cleaning for Docker](<Screenshot 2026-03-17 002459.png>)
 
 
-What This Project Demonstrates:
+# What This Project Demonstrates:
 
     • Containerizing applications using Docker
     • Deploying containers to Kubernetes
@@ -157,8 +157,10 @@ What This Project Demonstrates:
     • Scaling applications horizontally
     • Managing containers within a cluster
 
-Future Improvements:
-Potential enhancements for this project:
+# Future Improvements:
+
+<h2> Potential enhancements for this project:</h2>
+
     • Integrate CI/CD deployment using GitHub Actions
     • Push Docker images to a container registry
     • Deploy on a cloud Kubernetes cluster (EKS or GKE)
