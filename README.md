@@ -8,7 +8,7 @@ A hands-on DevOps project demonstrating how to containerize a Node.js applicatio
 This project simulates a simple production-style Kubernetes deployment. A Node.js application is containerized using Docker and deployed into a Kubernetes cluster. The application is exposed through a Kubernetes Service, allowing external access via Minikube.
 
 The project also demonstrates how Kubernetes manages multiple pods and how deployments can be scaled dynamically.
-
+ 
 *Architecture*
     User (Browser)
             ↓
