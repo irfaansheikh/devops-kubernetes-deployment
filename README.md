@@ -1,6 +1,6 @@
 # devops-kubernetes-deployment
 
-*DevOps Kubernetes Deployment*
+# DevOps Kubernetes Deployment
 A hands-on DevOps project demonstrating how to containerize a Node.js application and deploy it to a Kubernetes cluster using Minikube. The project showcases container orchestration, service exposure, and horizontal scaling.
 
 *Project Overview*
@@ -143,14 +143,16 @@ minikube delete
 ![Destroy the clusters](<Screenshot 2026-03-17 001921.png>)
 
 Remove unused Docker resources:
-docker system prune -a
-docker volume prune
-docker builder prune
-docker system prune -a
+    docker system prune -a
+    docker volume prune
+    docker builder prune
+    docker system prune -a
 ![Clean Docker images](<Screenshot 2026-03-17 002322.png>)
 ![Optional deep cleaning for Docker](<Screenshot 2026-03-17 002459.png>)
 
-What This Project Demonstrates
+
+What This Project Demonstrates:
+
     • Containerizing applications using Docker
     • Deploying containers to Kubernetes
     • Creating Kubernetes Deployments
@@ -158,7 +160,7 @@ What This Project Demonstrates
     • Scaling applications horizontally
     • Managing containers within a cluster
 
-Future Improvements
+Future Improvements:
 Potential enhancements for this project:
     • Integrate CI/CD deployment using GitHub Actions
     • Push Docker images to a container registry
