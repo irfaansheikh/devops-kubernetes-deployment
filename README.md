@@ -110,7 +110,7 @@ Kubernetes automatically distributes traffic between running pods.
 # Screenshots
 Minikube Cluster Start
 
-![minikube start](<Screenshot 2026-03-16 225849.png>)
+![minikube start](<./SS/minikube-start.png>)
 
 Docker Image Build
 
