@@ -51,7 +51,7 @@ Cluster Management<br>
 The application is a simple Node.js HTTP server.
 <br>
 <h3>Example response:</h3>
-    Hello from Kubernetes DevOps Project
+    Hello from Kubernetes DevOps Project<br>
 
 The container exposes port 3000, which Kubernetes routes through the service.
 
@@ -64,34 +64,34 @@ The container exposes port 3000, which Kubernetes routes through the service.
     Build Docker Image<br>
     docker build -t devops-k8s-app:v1 .
 
-<h3> Verify image:
+<h3> Verify image:</h3>
     docker images<br>
     Load Image into Minikube<br>
     minikube image load devops-k8s-app:v1
 
-Verify image inside cluster:
+<h3>Verify image inside cluster:</h3>
     minikube image ls<br>
     Deploy Application<br>
     kubectl apply -f deployment.yaml
 
-Check pods:
+<h3>Check pods:</h3>
     kubectl get pods<br>
     Expose Application<br>
     kubectl apply -f service.yaml
 
-Verify service:
+<h3>Verify service:</h3>
     kubectl get services
 
-Access application:
+<h3>Access application:</h3>
     minikube service devops-service<br>
     Scaling the Application
 
-Kubernetes allows horizontal scaling by increasing the number of running pods.
+<h3>Kubernetes allows horizontal scaling by increasing the number of running pods.
 
-Example scaling command:
+<h3>Example scaling command:</h3>
     kubectl scale deployment devops-app --replicas=10
 
-Verify scaling:
+<h3>Verify scaling:</h3>
     kubectl get pods
 
 Kubernetes automatically distributes traffic between running pods.
@@ -134,16 +134,18 @@ Browser Output<br>
 ![Browser output](<Screenshot 2026-03-17 000651.png>)
 
 
-Cleanup
-Destroy the Kubernetes cluster:<br>
+<h3>Cleanup</h3>
+<h3>Destroy the Kubernetes cluster:<h3><br>
 minikube delete<br>
 ![Destroy the clusters](<Screenshot 2026-03-17 001921.png>)
 
 Remove unused Docker resources:
-    docker system prune -a<br>
-    docker volume prune<br>
-    docker builder prune<br>
-    docker system prune -a<br>
+    
+    docker system prune -a <br>
+    docker volume prune <br>
+    docker builder prune <br>
+    docker system prune -a <br>
+    
 ![Clean Docker images](<Screenshot 2026-03-17 002322.png>)
 ![Optional deep cleaning for Docker](<Screenshot 2026-03-17 002459.png>)
 
