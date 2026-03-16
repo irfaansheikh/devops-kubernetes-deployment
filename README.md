@@ -35,31 +35,31 @@ README.md
 
 # Tools Used
 
-Containerization
+Containerization<br>
     • Docker
 
-Container Orchestration
+Container Orchestration<br>
     • Kubernetes
 
-Local Kubernetes Cluster
+Local Kubernetes Cluster<br>
     • Minikube
 
-Cluster Management
+Cluster Management<br>
     • kubectl
 
 # Application
 The application is a simple Node.js HTTP server.
-
-# Example response:
+<br>
+<h3>Example response:</h3>
     Hello from Kubernetes DevOps Project
 
 The container exposes port 3000, which Kubernetes routes through the service.
 
 # Deployment Workflow
-<h2> Start Kubernetes Cluster: </h2>
+<h3> Start Kubernetes Cluster: </h3><br>
     minikube start
 
-Verify cluster status:
+<h3> Verify cluster status: </h3><br>
     kubectl get nodes
     Build Docker Image
     docker build -t devops-k8s-app:v1 .
