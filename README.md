@@ -24,17 +24,16 @@ The project also demonstrates how Kubernetes manages multiple pods and how deplo
 # Project Structure
 
 devops-kubernetes-deployment/ <br>
-app/
- ├── app.js
- ├── package.json
- └── Dockerfile
-k8s/
- ├── deployment.yaml
- └── service.yaml
-
+app/ <br>
+ ├── app.js<br>
+ ├── package.json<br>
+ └── Dockerfile<br>
+k8s/<br>
+ ├── deployment.yaml<br>
+ └── service.yaml<br>
 README.md
 
-*Tools Used*
+# Tools Used
 
 Containerization
     • Docker
@@ -48,16 +47,16 @@ Local Kubernetes Cluster
 Cluster Management
     • kubectl
 
-*Application*
+# Application
 The application is a simple Node.js HTTP server.
 
-*Example response:*
+# Example response:
     Hello from Kubernetes DevOps Project
 
 The container exposes port 3000, which Kubernetes routes through the service.
 
-Deployment Workflow
-Start Kubernetes Cluster:
+# Deployment Workflow
+<h2> Start Kubernetes Cluster: </h2>
     minikube start
 
 Verify cluster status:
