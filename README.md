@@ -1,5 +1,8 @@
+![Kubernetes Deployment](./ss/kubernetes-deployment.png)
 # DevOps Kubernetes Deployment
 A hands-on DevOps project demonstrating how to containerize a Node.js application and deploy it to a Kubernetes cluster using Minikube. The project showcases container orchestration, service exposure, and horizontal scaling.
+
+
 
 # Project Overview
 
@@ -49,135 +52,130 @@ Cluster Management<br>
 
 # Application
 The application is a simple Node.js HTTP server.
-<br>
+
 <h3>Example response:</h3>
 
-    Hello from Kubernetes DevOps Project <br>
-<br>
+    Hello from Kubernetes DevOps Project
+
+
 The container exposes port 3000, which Kubernetes routes through the service.
 
 # Deployment Workflow
-<h3> Start Kubernetes Cluster: </h3>
+
+Start Kubernetes Cluster:
 
     minikube start
 
-<h3> Verify cluster status: </h3>
+Verify cluster status:
 
     kubectl get nodes
     Build Docker Image
     docker build -t devops-k8s-app:v1 .
 
-<h3> Verify image:</h3>
+Verify image:
 
     docker images
     Load Image into Minikube
     minikube image load devops-k8s-app:v1
 
-<h3>Verify image inside cluster:</h3>
+Verify image inside cluster:
 
     minikube image ls
     Deploy Application
     kubectl apply -f deployment.yaml
 
-<h3>Check pods:</h3>
+Check pods:
 
     kubectl get pods
     Expose Application
     kubectl apply -f service.yaml
 
-<h3>Verify service:</h3>
+Verify service:
 
     kubectl get services
 
-<h3>Access application:</h3>
+Access application:
 
     minikube service devops-service
     Scaling the Application
 
-<h3>Kubernetes allows horizontal scaling by increasing the number of running pods.
+Kubernetes allows horizontal scaling by increasing the number of running pods.
 
-<h3>Example scaling command:</h3>
+Example scaling command:
 
     kubectl scale deployment devops-app --replicas=10
 
-<h3>Verify scaling:</h3>
+Verify scaling:
 
     kubectl get pods
 
 Kubernetes automatically distributes traffic between running pods.
 
-
 # Screenshots
+
 Minikube Cluster Start
 
-![minikube start](<./SS/minikube-start.png>)
-
+![minikube start](<./ss/minikube-start.png>)
+#
 Docker Image Build
 
-![docker build](<Screenshot 2026-03-16 230859.png>)
-
+![docker build](<./ss/docker-build.png>)
+#
 Docker Images
 
-![docker images](<Screenshot 2026-03-16 231703.png>)
-
+![docker images](<./ss/docker-images.png>)
+#
 Image Loaded into Minikube
 
-![minikube image load & list](<Screenshot 2026-03-16 231509.png>)
+![minikube image load & list](<./ss/minikube-image-load-list.png>)
+#
+Kubernetes Apply Deployment
 
-Kubernetes Deployment
+![kubectl apply deployment](<./ss/kubectl-apply.png>)
+#
+Scaling Demonstration & Kubernetes Pods After Scaling
 
-![kubectl apply deployment](<Screenshot 2026-03-16 232017.png>)
-![kubectl apply deployment](<Screenshot 2026-03-16 235637.png>)
+![kubectl scale deployment](<./ss/kubectl-scale.png>)
+#
+Kubernetes Apply Service
 
-Scaling Demonstration
+![kubectl apply service](<./ss/kubectl-apply-service.png>)
+#
+Kubernetes Get Service
 
-![kubectl scale deployment](<Screenshot 2026-03-17 001446.png>)
+![kubectl get services](<./ss/kubectl-get-services.png>)
+#
+Service Verification & Application Access
 
-Kubernetes Pods After Scaling
-
-![alt text](<Screenshot 2026-03-17 005143.png>)
-
-Kubernetes Service
-
-![kubectl apply service](<Screenshot 2026-03-17 000323.png>)
-![kubectl get services](<Screenshot 2026-03-17 000201.png>)
-
-Service Verification
-
-![minikube service](<Screenshot 2026-03-17 000559.png>)
-
-Application Access
-
-![minikube service](<Screenshot 2026-03-17 000559.png>)
-
+![minikube service verification & App Access](<./ss/service-verification-app-access.png>)
+#
 Browser Output
 
-![Browser output](<Screenshot 2026-03-17 000651.png>)
-
-
+![Browser output](<./ss/browser-output.png>)
+#
 <h3>Cleanup</h3>
 
 <h3>Destroy the Kubernetes cluster:</h3>
 
-minikube delete<br>
+minikube delete
 
-![Destroy the clusters](<Screenshot 2026-03-17 001921.png>)
-
+![Destroy the clusters](<./ss/destroy-clusters.png>)
+#
 Remove unused Docker resources:
     
-    docker system prune -a <br>
-    docker volume prune <br>
-    docker builder prune <br>
-    docker system prune -a <br>
+    docker system prune -a
+    docker volume prune
+    docker builder prune
+    docker system prune -a
 
 Clean Docker images
 
-![Clean Docker images](<Screenshot 2026-03-17 002322.png>)
-
+![Clean Docker images](<./ss/clean-docker-images.png>)
+#
 Optional deep cleaning for Docker
 
-![Optional deep cleaning for Docker](<Screenshot 2026-03-17 002459.png>)
-
+![Optional deep cleaning for Docker](<./ss/docker-deep-cleaning.png>)
+#
 
 # What This Project Demonstrates:
 
